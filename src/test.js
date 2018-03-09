@@ -29,6 +29,7 @@ superagent.get(reptileUrl).end(function (err, res) {
     let $ = cheerio.load(res.text);
     $('#list-container .note-list li').each(function (i, elem) {
         // 拿到当前li标签下所有的内容，开始干活了
-        console.log()
+       let temp =  $(elem).find('.wrap-img img').attr('src')
+        console.log(temp)
     });
 });
